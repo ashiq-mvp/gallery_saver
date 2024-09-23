@@ -2,15 +2,15 @@ group 'carnegietechnologies.gallery_saver'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '2.0.10'
-    ext.kotlinCoroutinesVersion = '1.3.8'
+    ext.kotlin_version = '2.0.20'
+    ext.kotlinCoroutinesVersion = '1.6.4'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:8.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -30,6 +30,15 @@ android {
 
     // Add the required namespace
     namespace 'carnegietechnologies.gallery_saver'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
