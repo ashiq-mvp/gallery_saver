@@ -28,6 +28,9 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 34
 
+    // Add the required namespace
+    namespace 'carnegietechnologies.gallery_saver'
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
